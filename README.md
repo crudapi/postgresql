@@ -16,6 +16,13 @@ docker run --name postgresql \
     -d postgres
 ```
 
+## password authentication failed
+```bash
+vi /var/lib/postgresql/data/pgdata/pg_hba.conf
+#host all all all scram-sha-256
+host all all all trust
+```
+
 ## pgadmin4
 ```bash
 docker rm -f pgadmin4
